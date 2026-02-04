@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Exit Playbook — Sell-Side M&A Advisory</title>
+<meta name="description" content="Strategic sell-side M&A advisory for privately held businesses with $2M–$50M+ in revenue. We guide owners through every phase to maximize value and close with confidence.">
+<meta property="og:title" content="The Exit Playbook — Sell-Side M&A Advisory">
+<meta property="og:description" content="Strategic sell-side advisory for business owners in the lower middle market. Expert guidance from readiness to closing.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://theexitplaybook.net">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1B2A4A;--navy-d:#132038;--navy-l:#2C4268;--gold:#B8952E;--gold-l:#D4AF37;--white:#FFF;--off:#F8F7F4;--brd:#E4E2DC;--brd-l:#EDECEA;--txt:#1D2939;--txt2:#5A6578;--txt3:#8A91A0;--hd:'Cormorant Garamond',serif;--bd:'DM Sans',sans-serif}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--bd);background:var(--white);color:var(--txt);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.85rem 2.5rem;background:rgba(255,255,255,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid transparent;display:flex;justify-content:space-between;align-items:center;transition:all .35s}
+.nav.scrolled{background:rgba(255,255,255,.97);border-bottom-color:var(--brd)}
+.nav-logo{font-family:var(--hd);font-size:1.15rem;font-weight:700;color:var(--navy);letter-spacing:.5px;cursor:pointer}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-link{color:var(--txt2);font-size:.87rem;font-weight:500;letter-spacing:.2px;transition:color .3s;cursor:pointer}
+.nav-link:hover,.nav-link.active{color:var(--navy)}
+.nav-cta{background:var(--navy);color:var(--white);padding:.55rem 1.4rem;border-radius:4px;font-weight:700;font-size:.82rem;letter-spacing:.4px;cursor:pointer;transition:background .3s}
+.nav-cta:hover{background:var(--navy-l)}
+.nav-mob{display:none;background:none;border:none;color:var(--navy);font-size:1.4rem;cursor:pointer}
+.mob-menu{display:none;position:fixed;top:56px;left:0;right:0;bottom:0;background:rgba(255,255,255,.98);z-index:99;flex-direction:column;padding:2rem;gap:1.5rem}
+.mob-menu.open{display:flex}
+.mob-link{color:var(--txt2);font-size:1.15rem;font-weight:600;font-family:var(--hd);cursor:pointer}
+.mob-link.active{color:var(--navy)}
+.sec{padding:5.5rem 2rem}.sec-inner{max-width:1100px;margin:0 auto}
+.bg-off{background:var(--off)}.bg-navy{background:var(--navy)}.bg-white{background:var(--white)}
+.eye{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--gold);margin-bottom:.85rem}
+.eye-l{color:var(--gold-l)}
+.ttl{font-family:var(--hd);font-size:clamp(1.9rem,3.5vw,2.7rem);font-weight:600;line-height:1.2;margin-bottom:1.1rem;color:var(--navy)}
+.ttl-w{color:var(--white)}.gold{color:var(--gold)}.gold-l{color:var(--gold-l)}
+.dsc{font-size:1.05rem;color:var(--txt2);max-width:620px;line-height:1.75}
+.dsc-l{color:rgba(255,255,255,.6)}
+.btn{display:inline-block;background:var(--navy);color:var(--white);padding:.85rem 2rem;border-radius:4px;font-weight:700;font-size:.88rem;font-family:var(--bd);letter-spacing:.4px;cursor:pointer;border:none;transition:all .3s}
+.btn:hover{background:var(--navy-l)}
+.btn-g{background:transparent;color:var(--navy);border:1.5px solid var(--brd)}.btn-g:hover{border-color:var(--navy);background:transparent}
+.btn-au{background:var(--gold);border:none;color:var(--white)}.btn-au:hover{background:var(--gold-l)}
+.card{background:var(--white);border:1px solid var(--brd-l);border-radius:8px;padding:2rem;box-shadow:0 1px 3px rgba(0,0,0,.04);height:100%}
+.card-i{font-size:1.5rem;display:block;margin-bottom:.85rem}
+.card-t{font-family:var(--hd);font-size:1.12rem;font-weight:600;margin-bottom:.65rem;color:var(--navy)}
+.card-d{font-size:.9rem;color:var(--txt2);line-height:1.65}
+.card-s{background:var(--off);border:1px solid var(--brd-l);border-radius:8px;padding:1.75rem}
+.g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.25rem}
+.g4{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.25rem}
+.g6{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.6rem}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
+.g2c{display:grid;grid-template-columns:auto 1fr;gap:3.5rem;align-items:center}
+.g2s{display:grid;grid-template-columns:auto 1fr;gap:3.5rem;align-items:start}
+.q-sec{text-align:center;padding:4.5rem 2rem}
+.q-txt{font-family:var(--hd);font-size:clamp(1.2rem,2.3vw,1.75rem);font-weight:500;font-style:italic;color:var(--navy);max-width:660px;margin:0 auto 1rem;line-height:1.45}
+.q-at{font-size:.78rem;color:var(--gold);font-weight:700;letter-spacing:2px;text-transform:uppercase}
+.bl-item{padding:.75rem 0;display:flex;align-items:flex-start;gap:.75rem}
+.bl-item:not(:last-child){border-bottom:1px solid var(--brd-l)}
+.bl-dot{color:var(--gold);font-size:.8rem;margin-top:3px;flex-shrink:0}
+.bl-txt{font-size:.93rem;color:var(--txt2)}
+.bk{border-radius:3px 10px 10px 3px;box-shadow:8px 8px 25px rgba(0,0,0,.15);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;flex-shrink:0;background:linear-gradient(135deg,var(--navy-d),var(--navy-l))}
+.bk-s{width:195px;height:268px;padding:1.5rem}.bk-l{width:240px;height:330px;padding:2rem}
+.ph{background:var(--off);border:1px solid var(--brd-l);border-radius:8px;padding:2rem;position:relative;height:100%}
+.ph-bg{font-family:var(--hd);font-size:2.3rem;font-weight:700;color:rgba(27,42,74,.07);position:absolute;top:1rem;right:1.25rem}
+.ph-lb{font-size:.68rem;color:var(--gold);font-weight:700;letter-spacing:2px;margin-bottom:.5rem}
+.ph-t{font-family:var(--hd);font-size:1.15rem;font-weight:600;margin-bottom:.7rem;color:var(--navy)}
+.ph-d{font-size:.9rem;color:var(--txt2);line-height:1.6}
+.stats{display:flex;justify-content:space-around;flex-wrap:wrap;gap:2rem}
+.st-n{font-family:var(--hd);font-size:2.4rem;font-weight:700;color:var(--gold-l);line-height:1}
+.st-l{font-size:.75rem;color:rgba(255,255,255,.55);margin-top:.5rem;letter-spacing:1px;text-transform:uppercase;font-weight:500}
+.divider{height:1px;max-width:1100px;margin:0 auto;background:var(--brd-l)}
+.ind{background:var(--off);border:1px solid var(--brd-l);border-radius:5px;padding:.85rem 1rem;font-size:.87rem;font-weight:500;color:var(--txt2);text-align:center}
+.cta-s{text-align:center}
+.ch-p{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--gold);margin-bottom:.85rem;padding-bottom:.65rem;border-bottom:1px solid var(--brd)}
+.ch-r{padding:.65rem 0;display:flex;align-items:baseline;gap:1rem}
+.ch-r:not(:last-child){border-bottom:1px solid var(--brd-l)}
+.ch-n{font-family:var(--hd);font-size:.85rem;color:var(--gold);font-weight:700;min-width:1.5rem}
+.ch-nm{font-size:.95rem;color:var(--txt)}
+.fc{background:var(--white);border:1px solid var(--brd-l);border-radius:8px;padding:2.25rem;box-shadow:0 2px 12px rgba(0,0,0,.05)}
+.fg{margin-bottom:1.25rem}
+.fl{display:block;font-size:.83rem;font-weight:600;color:var(--txt2);margin-bottom:.4rem}
+.fr{color:var(--gold)}
+.fi,.fs{width:100%;padding:.85rem 1rem;background:var(--off);border:1px solid var(--brd);border-radius:6px;color:var(--txt);font-family:var(--bd);font-size:.95rem;outline:none;transition:border-color .3s}
+.fi:focus,.fs:focus{border-color:var(--navy)}
+.fs{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath fill='%238A91A0' d='M1.41 0L6 4.58 10.59 0 12 1.41l-6 6-6-6z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.25rem}
+.fsub{width:100%;padding:.95rem;background:var(--navy);color:var(--white);border:none;border-radius:6px;font-family:var(--bd);font-size:.95rem;font-weight:700;letter-spacing:.4px;cursor:pointer;transition:background .3s}
+.fsub:hover{background:var(--navy-l)}.fsub:disabled{opacity:.6;cursor:not-allowed}
+.ferr{background:rgba(184,58,58,.06);border:1px solid rgba(184,58,58,.2);color:#B83A3A;padding:.7rem 1rem;border-radius:6px;font-size:.85rem;margin-bottom:1.25rem}
+.suc-i{width:60px;height:60px;background:rgba(184,149,46,.1);border:2px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-size:1.5rem;color:var(--gold)}
+.cr{padding:.85rem 0;border-bottom:1px solid var(--brd);display:flex;justify-content:space-between;align-items:center}
+.cl{font-size:.83rem;color:var(--txt3);font-weight:600}
+.cv{color:var(--navy);font-size:.88rem;font-weight:600}
+.ec{margin-top:2.5rem;background:var(--white);border:1px solid var(--brd-l);border-radius:8px;padding:1.5rem;box-shadow:0 1px 4px rgba(0,0,0,.03)}
+.el{font-size:.72rem;color:var(--gold);font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:.65rem}
+.et{font-size:.9rem;color:var(--txt2);line-height:1.65}
+.mc{background:var(--white);border:1px solid var(--brd-l);border-radius:8px;padding:2.5rem;text-align:center;min-width:210px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.mg{font-family:var(--hd);font-size:3.2rem;font-weight:700;color:var(--navy);line-height:1;margin-bottom:1rem}
+.ft{background:var(--navy);padding:3.5rem 2rem;color:rgba(255,255,255,.7)}
+.ft-in{max-width:1100px;margin:0 auto}
+.ft-top{display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:2rem;margin-bottom:2.5rem}
+.ft-br{font-family:var(--hd);font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:.5rem}
+.ft-sb{font-size:.82rem;color:rgba(255,255,255,.5)}
+.ft-lk{display:flex;gap:2rem;flex-wrap:wrap}
+.ft-l{color:rgba(255,255,255,.6);font-size:.83rem;font-weight:500;cursor:pointer;transition:color .3s}
+.ft-l:hover{color:rgba(255,255,255,.9)}
+.ft-bt{border-top:1px solid rgba(255,255,255,.1);padding-top:1.5rem}
+.ft-cp{font-size:.75rem;color:rgba(255,255,255,.4);margin-bottom:.4rem}
+.ft-lg{font-size:.7rem;color:rgba(255,255,255,.3);line-height:1.6;max-width:650px}
+.hero{min-height:92vh;display:flex;align-items:center;padding:8rem 2rem 5rem;position:relative;overflow:hidden;background:linear-gradient(170deg,var(--white) 0%,var(--off) 100%)}
+.hero-glow{position:absolute;top:-30%;right:-15%;width:55vw;height:55vw;background:radial-gradient(circle,rgba(27,42,74,.03) 0%,transparent 70%);pointer-events:none}
+.hero-in{max-width:1100px;margin:0 auto;position:relative;z-index:2}
+.hero-h1{font-family:var(--hd);font-size:clamp(2.5rem,5.5vw,4.2rem);font-weight:600;line-height:1.1;margin-bottom:1.5rem;max-width:750px;color:var(--navy)}
+.hero-p{font-size:1.15rem;color:var(--txt2);max-width:560px;line-height:1.75;margin-bottom:2.5rem;font-weight:400}
+.hero-bt{display:flex;gap:1rem;flex-wrap:wrap}
+.pg-hd{padding-top:9.5rem}
+.bio{font-size:1.02rem;color:var(--txt2);line-height:1.75;margin-bottom:1.1rem}
+.sv-n{font-family:var(--hd);font-size:.85rem;color:var(--gold);font-weight:600;margin-bottom:.4rem}
+.sv-t{font-family:var(--hd);font-size:1.7rem;font-weight:600;margin-bottom:1rem;color:var(--navy)}
+.sv-d{font-size:.98rem;color:var(--txt2);line-height:1.7}
+.pr-n{font-family:var(--hd);font-size:2.2rem;font-weight:700;color:rgba(27,42,74,.08);line-height:1;margin-bottom:.4rem}
+.pr-t{font-family:var(--hd);font-size:1.55rem;font-weight:600;margin-bottom:.4rem;color:var(--navy)}
+.pr-tl{font-size:.78rem;color:var(--gold);font-weight:600;margin-bottom:1rem}
+.pr-d{font-size:.98rem;color:var(--txt2);line-height:1.7}
+.bk-st{font-family:var(--hd);font-size:1.1rem;color:var(--gold);font-weight:500;font-style:italic;margin-bottom:1.25rem}
+.bk-mt{font-size:.88rem;color:var(--txt3);margin-top:.85rem}
+.page{display:none}.page.active{display:block}
+@media(max-width:900px){.nav-links{display:none!important}.nav-mob{display:block!important}.nav{padding:.85rem 1.25rem}}
+@media(max-width:800px){.g2,.g2c,.g2s,.frow{grid-template-columns:1fr!important}.g2c,.g2s{gap:2rem!important}.bk-l{width:200px;height:275px}.sec{padding:3.5rem 1.25rem}.hero{padding:7rem 1.25rem 3.5rem;min-height:80vh}}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav">
+<span class="nav-logo" onclick="go('home')">THE EXIT PLAYBOOK</span>
+<div class="nav-links">
+<span class="nav-link" data-page="services" onclick="go('services')">Services</span>
+<span class="nav-link" data-page="process" onclick="go('process')">Our Process</span>
+<span class="nav-link" data-page="book" onclick="go('book')">The Book</span>
+<span class="nav-link" data-page="about" onclick="go('about')">About</span>
+<span class="nav-cta" onclick="go('contact')">Free Consultation</span>
+</div>
+<button class="nav-mob" onclick="toggleMob()">☰</button>
+</nav>
+<div class="mob-menu" id="mobMenu">
+<span class="mob-link" onclick="go('home')">Home</span>
+<span class="mob-link" onclick="go('services')">Services</span>
+<span class="mob-link" onclick="go('process')">Our Process</span>
+<span class="mob-link" onclick="go('book')">The Book</span>
+<span class="mob-link" onclick="go('about')">About</span>
+<span class="mob-link" onclick="go('contact')">Contact</span>
+</div>
+
+<!-- HOME -->
+<div class="page active" id="page-home">
+<section class="hero"><div class="hero-glow"></div><div class="hero-in">
+<div class="reveal"><div class="eye">Sell-Side M&A Advisory · Lower Middle Market</div></div>
+<div class="reveal" style="transition-delay:.1s"><h1 class="hero-h1">You Built the Business.<br><span class="gold">We Help You Exit It Right.</span></h1></div>
+<div class="reveal" style="transition-delay:.2s"><p class="hero-p">Strategic sell-side advisory for privately held businesses with $2M–$50M+ in revenue. We guide owners through every phase of the M&A process to maximize value and close with confidence.</p></div>
+<div class="reveal hero-bt" style="transition-delay:.3s"><button class="btn" onclick="go('contact')">Schedule a Confidential Consultation →</button><button class="btn btn-g" onclick="go('process')">View Our Process</button></div>
+</div></section>
+<section class="sec bg-navy" style="padding:3.5rem 2rem"><div class="sec-inner stats">
+<div style="text-align:center"><div class="st-n">$2M–$50M+</div><div class="st-l">Revenue Range</div></div>
+<div style="text-align:center"><div class="st-n">6–9 Mo</div><div class="st-l">Typical Timeline</div></div>
+<div style="text-align:center"><div class="st-n">100%</div><div class="st-l">Sell-Side Focused</div></div>
+<div style="text-align:center"><div class="st-n">LMM</div><div class="st-l">Specialization</div></div>
+</div></section>
+<section class="sec bg-off"><div class="sec-inner">
+<div class="reveal"><div class="eye">Why Work With Us</div><h2 class="ttl">M&A Advisory Built for <span class="gold">Owner-Operators</span></h2><p class="dsc">Most business owners will only sell once. You deserve an advisor who treats your exit like the defining financial event it is — not just another deal in the pipeline.</p></div>
+<div class="g3" style="margin-top:2.5rem">
+<div class="reveal"><div class="card"><span class="card-i">🎯</span><h3 class="card-t">Sell-Side Specialists</h3><p class="card-d">We represent sellers exclusively. Our entire process is designed to maximize your outcome — from positioning through closing.</p></div></div>
+<div class="reveal" style="transition-delay:.05s"><div class="card"><span class="card-i">🛡️</span><h3 class="card-t">Total Confidentiality</h3><p class="card-d">Your employees, customers, and competitors won't know you're exploring a sale until you're ready.</p></div></div>
+<div class="reveal" style="transition-delay:.1s"><div class="card"><span class="card-i">📊</span><h3 class="card-t">Valuation & Positioning</h3><p class="card-d">We prepare your financials, craft the narrative, and position your business to command a premium from qualified buyers.</p></div></div>
+<div class="reveal" style="transition-delay:.15s"><div class="card"><span class="card-i">🤝</span><h3 class="card-t">Competitive Process</h3><p class="card-d">We run a structured process that creates buyer tension — strategic acquirers, PE firms, family offices, and independent sponsors.</p></div></div>
+<div class="reveal" style="transition-delay:.2s"><div class="card"><span class="card-i">⚖️</span><h3 class="card-t">Deal Structure Expertise</h3><p class="card-d">Cash at close, earnouts, rollovers, seller notes — we negotiate terms that protect you and maximize net proceeds.</p></div></div>
+<div class="reveal" style="transition-delay:.25s"><div class="card"><span class="card-i">📋</span><h3 class="card-t">Diligence to Close</h3><p class="card-d">We quarterback due diligence so you can keep running your business while we drive toward the finish line.</p></div></div>
+</div></div></section>
+<section class="sec bg-white q-sec"><div class="sec-inner reveal"><div class="q-txt">"Buyers don't buy businesses. They buy future cash flow with as little risk as possible."</div><div class="q-at">— The Exit Playbook, Chapter 2</div></div></section>
+<section class="sec bg-white"><div class="sec-inner">
+<div class="reveal"><div class="eye">Our Approach</div><h2 class="ttl">A Proven, <span class="gold">4-Phase Process</span></h2><p class="dsc">Selling a business is complicated. Our structured approach makes it simple, strategic, and confidential.</p></div>
+<div class="g4" style="margin-top:2.5rem">
+<div class="reveal"><div class="ph"><div class="ph-bg">01</div><div class="ph-lb">PHASE 01</div><h3 class="ph-t">Assess & Prepare</h3><p class="ph-d">We evaluate readiness, clean up financials, identify deal killers, and assemble your advisory team.</p></div></div>
+<div class="reveal" style="transition-delay:.07s"><div class="ph"><div class="ph-bg">02</div><div class="ph-lb">PHASE 02</div><h3 class="ph-t">Position & Market</h3><p class="ph-d">We build the CIM, create the buyer list, and go to market confidentially to generate competitive interest.</p></div></div>
+<div class="reveal" style="transition-delay:.14s"><div class="ph"><div class="ph-bg">03</div><div class="ph-lb">PHASE 03</div><h3 class="ph-t">Negotiate & Structure</h3><p class="ph-d">We collect offers, negotiate LOIs, and structure the deal to maximize cash at close.</p></div></div>
+<div class="reveal" style="transition-delay:.21s"><div class="ph"><div class="ph-bg">04</div><div class="ph-lb">PHASE 04</div><h3 class="ph-t">Diligence & Close</h3><p class="ph-d">We manage due diligence, coordinate legal teams, and drive toward closing — keeping you in control.</p></div></div>
+</div>
+<div class="reveal" style="text-align:center;margin-top:2.5rem;transition-delay:.3s"><button class="btn" onclick="go('process')">See the Full Process →</button></div>
+</div></section>
+<div class="divider"></div>
+<section class="sec bg-white"><div class="sec-inner">
+<div class="reveal"><div class="eye">Industries</div><h2 class="ttl">Deep Experience Across <span class="gold">Key Sectors</span></h2></div>
+<div class="g6" style="margin-top:2rem" id="industries"></div>
+</div></section>
+<section class="sec bg-off"><div class="sec-inner"><div class="reveal"><div class="g2c">
+<div class="bk bk-s"><div style="font-family:var(--hd);font-size:.7rem;font-weight:700;color:#fff;letter-spacing:4px;text-transform:uppercase">THE</div><div style="font-family:var(--hd);font-size:2.1rem;font-weight:700;color:#fff;letter-spacing:3px;line-height:1">EXIT</div><div style="font-family:var(--hd);font-size:1rem;font-weight:700;color:#fff;letter-spacing:3px;text-transform:uppercase;margin-bottom:.7rem">PLAYBOOK</div><div style="background:#B83A3A;padding:.3rem .8rem;width:calc(100% + 3rem)"><span style="font-size:.45rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold-l)">How to Sell Your Business</span></div><div style="font-family:var(--hd);font-size:.5rem;font-weight:700;color:#fff;letter-spacing:3px;text-transform:uppercase;position:absolute;bottom:.85rem">Edward Rivadeneira</div></div>
+<div><div class="eye">The Book</div><h2 class="ttl">The Exit Playbook</h2><p class="dsc">20 chapters of straight-talking M&A guidance for the lower middle market. From readiness to closing — everything you need to sell smart.</p><div style="margin-top:1.5rem"><button class="btn" onclick="go('book')">Learn More & Get a Free Chapter →</button></div></div>
+</div></div></div></section>
+<section class="sec bg-navy cta-s"><div class="sec-inner reveal"><div class="eye eye-l">Ready to Explore Your Options?</div><h2 class="ttl ttl-w">Every Great Exit <span class="gold-l">Starts With a Conversation</span></h2><p class="dsc dsc-l" style="margin:0 auto 2rem">Whether you're planning to sell in 6 months or 5 years, a confidential consultation helps you understand your options.</p><button class="btn btn-au" onclick="go('contact')">Schedule Your Free Consultation →</button></div></section>
+</div>
+
+<!-- SERVICES -->
+<div class="page" id="page-services">
+<section class="sec bg-off pg-hd"><div class="sec-inner reveal"><div class="eye">Our Services</div><h2 class="ttl">Full Sell-Side Advisory for the <span class="gold">Lower Middle Market</span></h2><p class="dsc">We guide privately held business owners through the most important financial transaction of their lives.</p></div></section>
+<div id="svc-list"></div>
+<section class="sec bg-navy cta-s"><div class="sec-inner reveal"><div class="eye eye-l">For CPA & Advisor Partners</div><h2 class="ttl ttl-w">Your Clients Are Thinking About <span class="gold-l">Selling</span></h2><p class="dsc dsc-l" style="margin:0 auto 2rem">Partner with us to bring M&A expertise to your client relationships.</p><a class="btn btn-au" href="mailto:eddieriva@gmail.com?subject=CPA%20Referral%20Partnership">Discuss a Partnership →</a></div></section>
+</div>
+
+<!-- PROCESS -->
+<div class="page" id="page-process">
+<section class="sec bg-off pg-hd"><div class="sec-inner reveal"><div class="eye">Our Process</div><h2 class="ttl">A Structured Approach to <span class="gold">Selling Your Business</span></h2><p class="dsc">Every phase is designed to maintain confidentiality, create competition, and maximize your outcome.</p></div></section>
+<div id="proc-list"></div>
+<section class="sec bg-white q-sec"><div class="sec-inner reveal"><div class="q-txt">"Process beats luck. Every time."</div><div class="q-at">— The Exit Playbook, Chapter 13</div></div></section>
+<section class="sec bg-navy cta-s"><div class="sec-inner reveal"><div class="eye eye-l">Ready to Start?</div><h2 class="ttl ttl-w">Your Exit Starts With <span class="gold-l">One Conversation</span></h2><p class="dsc dsc-l" style="margin:0 auto 2rem">Schedule a free, confidential consultation to discuss your goals and what your business could be worth.</p><button class="btn btn-au" onclick="go('contact')">Schedule Your Consultation →</button></div></section>
+</div>
+
+<!-- BOOK -->
+<div class="page" id="page-book">
+<section class="sec bg-off pg-hd"><div class="sec-inner reveal"><div class="g2c">
+<div class="bk bk-l"><div style="font-family:var(--hd);font-size:.9rem;font-weight:700;color:#fff;letter-spacing:6px;text-transform:uppercase">THE</div><div style="font-family:var(--hd);font-size:2.8rem;font-weight:700;color:#fff;letter-spacing:4px;line-height:1">EXIT</div><div style="font-family:var(--hd);font-size:1.4rem;font-weight:700;color:#fff;letter-spacing:4px;text-transform:uppercase;margin-bottom:1rem">PLAYBOOK</div><div style="background:#B83A3A;padding:.4rem 1rem;width:calc(100% + 3rem)"><span style="font-size:.55rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold-l)">How to Sell Your Business</span></div><div style="font-family:var(--hd);font-size:.6rem;font-weight:700;color:#fff;letter-spacing:3px;text-transform:uppercase;position:absolute;bottom:1.25rem">Edward Rivadeneira</div></div>
+<div><div class="eye">The Book</div><h1 class="ttl">The Exit Playbook</h1><p class="bk-st">How to Sell Your Business for the Best Price</p><p class="dsc">A straight-talking guide for the lower middle market. 20 chapters covering every phase of the M&A process. No fluff. No jargon. Just the playbook.</p><p class="bk-mt">By Edward Rivadeneira · 20 Chapters · 95 Pages</p><div style="margin-top:1.5rem"><button class="btn" onclick="go('contact')">Get a Free Chapter →</button></div></div>
+</div></div></section>
+<section class="sec bg-white"><div class="sec-inner"><div class="reveal"><div class="eye">Inside the Book</div><h2 class="ttl">20 Chapters. <span class="gold">Zero Fluff.</span></h2></div><div id="ch-list"></div></div></section>
+<section class="sec bg-off q-sec"><div class="sec-inner reveal"><div class="q-txt">"You don't get what you deserve — you get what you negotiate."</div><div class="q-at">— The Exit Playbook, Chapter 10</div></div></section>
+<section class="sec bg-white"><div class="sec-inner">
+<div class="reveal"><div class="eye">Who It's For</div><h2 class="ttl">Built for People Who've <span class="gold">Built Something Real</span></h2></div>
+<div class="g3" style="margin-top:2.5rem">
+<div class="reveal"><div class="card"><span class="card-i">🏗️</span><h3 class="card-t">Business Owners</h3><p class="card-d">You're doing $2M–$50M+ in revenue and want to understand what it takes to sell smart.</p></div></div>
+<div class="reveal" style="transition-delay:.05s"><div class="card"><span class="card-i">📊</span><h3 class="card-t">CPAs & Financial Advisors</h3><p class="card-d">Your clients ask about selling. This book gives you the M&A fluency to guide the conversation.</p></div></div>
+<div class="reveal" style="transition-delay:.1s"><div class="card"><span class="card-i">⚖️</span><h3 class="card-t">M&A Professionals</h3><p class="card-d">A practical resource for clients new to the process. Covers structure, diligence, and more.</p></div></div>
+<div class="reveal" style="transition-delay:.15s"><div class="card"><span class="card-i">👨‍👩‍👧‍👦</span><h3 class="card-t">Family Successors</h3><p class="card-d">Chapter 20 covers ESOPs, MBOs, and succession dynamics.</p></div></div>
+<div class="reveal" style="transition-delay:.2s"><div class="card"><span class="card-i">🚀</span><h3 class="card-t">Founders Building to Exit</h3><p class="card-d">Chapter 19 shows how to build a business that commands a premium.</p></div></div>
+<div class="reveal" style="transition-delay:.25s"><div class="card"><span class="card-i">🤝</span><h3 class="card-t">Search Funds & Operators</h3><p class="card-d">Understand the seller's perspective so you can be the buyer they trust.</p></div></div>
+</div></div></section>
+<section class="sec bg-navy cta-s"><div class="sec-inner reveal"><div class="eye eye-l">Get Started</div><h2 class="ttl ttl-w">Request Your <span class="gold-l">Free Chapter</span></h2><p class="dsc dsc-l" style="margin:0 auto 2rem">Drop your info and we'll send a sample chapter plus updates on the full release.</p><button class="btn btn-au" onclick="go('contact')">Get Your Free Chapter →</button></div></section>
+</div>
+
+<!-- ABOUT -->
+<div class="page" id="page-about">
+<section class="sec bg-off pg-hd"><div class="sec-inner">
+<div class="reveal"><div class="eye">About</div><h2 class="ttl">Edward Rivadeneira</h2></div>
+<div class="reveal" style="transition-delay:.08s"><div class="g2s">
+<div class="mc"><div class="mg">ER</div><div style="font-family:var(--hd);font-size:1rem;color:var(--txt)">Edward Rivadeneira</div><div style="font-size:.78rem;color:var(--txt3);margin-top:.2rem">M&A Advisor · Author</div><div style="margin-top:1.25rem;display:flex;gap:1rem;justify-content:center"><a href="https://www.linkedin.com/in/eddieriva" target="_blank" rel="noopener" style="color:var(--navy);font-size:.82rem;font-weight:600">LinkedIn ↗</a><a href="mailto:eddieriva@gmail.com" style="color:var(--navy);font-size:.82rem;font-weight:600">Email</a></div></div>
+<div>
+<p class="bio">Edward Rivadeneira is a sell-side M&A advisor specializing in the lower middle market — the $2M to $50M+ revenue space where the majority of privately held business transactions happen.</p>
+<p class="bio">He works with investment banking professionals to guide business owners through every phase of the sale process: readiness assessment, valuation, positioning, buyer outreach, negotiation, due diligence, and closing. His approach is hands-on, confidential, and built around maximizing value for the seller.</p>
+<p class="bio">Edward wrote The Exit Playbook because too many owners go to market unprepared — leaving money on the table or watching deals collapse in diligence. The book distills the strategic playbook that smart sellers and their advisors use to get deals done on their terms.</p>
+<p class="bio">His background spans M&A transaction management, financial analysis, business operations, and technology. He brings a practical, no-jargon approach to every engagement — treating each client's exit as the defining financial event it is.</p>
+</div></div></div>
+</div></section>
+<section class="sec bg-white"><div class="sec-inner">
+<div class="reveal"><div class="eye">Philosophy</div><h2 class="ttl">How We <span class="gold">Think About Exits</span></h2></div>
+<div class="g3" style="margin-top:2.5rem">
+<div class="reveal"><div class="card-s"><h3 style="font-family:var(--hd);font-size:1.05rem;font-weight:600;margin-bottom:.55rem;color:var(--navy)">Sellers First</h3><p style="font-size:.88rem;color:var(--txt2);line-height:1.6">We represent sellers exclusively. No conflicts — our process is designed entirely around your outcome.</p></div></div>
+<div class="reveal" style="transition-delay:.05s"><div class="card-s"><h3 style="font-family:var(--hd);font-size:1.05rem;font-weight:600;margin-bottom:.55rem;color:var(--navy)">Preparation Wins</h3><p style="font-size:.88rem;color:var(--txt2);line-height:1.6">The best exits don't happen by accident. They happen because someone planned years in advance.</p></div></div>
+<div class="reveal" style="transition-delay:.1s"><div class="card-s"><h3 style="font-family:var(--hd);font-size:1.05rem;font-weight:600;margin-bottom:.55rem;color:var(--navy)">Process Creates Value</h3><p style="font-size:.88rem;color:var(--txt2);line-height:1.6">A structured, competitive process is worth more than any single buyer relationship.</p></div></div>
+<div class="reveal" style="transition-delay:.15s"><div class="card-s"><h3 style="font-family:var(--hd);font-size:1.05rem;font-weight:600;margin-bottom:.55rem;color:var(--navy)">Transparency Builds Trust</h3><p style="font-size:.88rem;color:var(--txt2);line-height:1.6">We tell you the truth — strengths and gaps. Honest preparation beats wishful thinking.</p></div></div>
+<div class="reveal" style="transition-delay:.2s"><div class="card-s"><h3 style="font-family:var(--hd);font-size:1.05rem;font-weight:600;margin-bottom:.55rem;color:var(--navy)">Details Matter</h3><p style="font-size:.88rem;color:var(--txt2);line-height:1.6">The difference between good and great lives in the fine print: working capital, earnouts, reps, and tax structure.</p></div></div>
+<div class="reveal" style="transition-delay:.25s"><div class="card-s"><h3 style="font-family:var(--hd);font-size:1.05rem;font-weight:600;margin-bottom:.55rem;color:var(--navy)">Your Life, Your Terms</h3><p style="font-size:.88rem;color:var(--txt2);line-height:1.6">An exit isn't just financial. It's personal. We help you think through wealth, legacy, and what's next.</p></div></div>
+</div></div></section>
+<section class="sec bg-off q-sec"><div class="sec-inner reveal"><div class="q-txt">"Exit isn't the end. It's the bridge to what's next."</div><div class="q-at">— The Exit Playbook, Chapter 7</div></div></section>
+<section class="sec bg-navy cta-s"><div class="sec-inner reveal"><div class="eye eye-l">Let's Talk</div><h2 class="ttl ttl-w">Start With a <span class="gold-l">Confidential Conversation</span></h2><p class="dsc dsc-l" style="margin:0 auto 2rem">No pressure. No obligation. Just an honest discussion about your business and your options.</p><button class="btn btn-au" onclick="go('contact')">Schedule a Consultation →</button></div></section>
+</div>
+
+<!-- CONTACT -->
+<div class="page" id="page-contact">
+<section class="sec bg-off pg-hd"><div class="sec-inner reveal"><div class="g2">
+<div>
+<div class="eye">Get in Touch</div><h2 class="ttl">Schedule a <span class="gold">Confidential Consultation</span></h2><p class="dsc">Whether you're ready to sell or just starting to think about it, the first step is a conversation.</p>
+<div style="margin-top:2.5rem">
+<div class="cr"><span class="cl">Email</span><a class="cv" href="mailto:eddieriva@gmail.com">eddieriva@gmail.com</a></div>
+<div class="cr"><span class="cl">LinkedIn</span><a class="cv" href="https://www.linkedin.com/in/eddieriva" target="_blank" rel="noopener">linkedin.com/in/eddieriva</a></div>
+</div>
+<div class="ec"><div class="el">What to Expect</div><p class="et">A 30-minute call to discuss your business, goals, and timeline. Honest assessment, no pressure, no obligation.</p></div>
+</div>
+<div class="fc" id="formBox">
+<form id="cForm" onsubmit="sub(event)">
+<div id="fErr" class="ferr" style="display:none"></div>
+<div class="fg"><label class="fl">Full Name <span class="fr">*</span></label><input class="fi" id="f_name" placeholder="Your full name" required></div>
+<div class="fg"><label class="fl">Email <span class="fr">*</span></label><input class="fi" id="f_email" type="email" placeholder="you@company.com" required></div>
+<div class="frow">
+<div><label class="fl">Your Role <span class="fr">*</span></label><select class="fs" id="f_role" required><option value="">Select</option><option>Business Owner</option><option>CPA / Accountant</option><option>Financial Advisor</option><option>M&A Professional</option><option>Attorney</option><option>Other</option></select></div>
+<div><label class="fl">Annual Revenue</label><select class="fs" id="f_rev"><option value="">Select range</option><option>Under $1M</option><option>$1M – $5M</option><option>$5M – $10M</option><option>$10M – $25M</option><option>$25M+</option><option>Prefer not to say</option></select></div>
+</div>
+<div class="fg"><label class="fl">Exit Timeline</label><select class="fs" id="f_tl"><option value="">When are you thinking?</option><option>Less than 1 year</option><option>1–2 years</option><option>3–5 years</option><option>5+ years</option><option>Just exploring</option><option>Not applicable</option></select></div>
+<button type="submit" class="fsub" id="subBtn">Schedule My Consultation →</button>
+</form>
+</div>
+</div></div></section>
+</div>
+
+<!-- FOOTER -->
+<footer class="ft"><div class="ft-in">
+<div class="ft-top">
+<div><div class="ft-br">THE EXIT PLAYBOOK</div><div class="ft-sb">Sell-Side M&A Advisory</div></div>
+<div class="ft-lk"><span class="ft-l" onclick="go('home')">Home</span><span class="ft-l" onclick="go('services')">Services</span><span class="ft-l" onclick="go('process')">Process</span><span class="ft-l" onclick="go('book')">The Book</span><span class="ft-l" onclick="go('about')">About</span><span class="ft-l" onclick="go('contact')">Contact</span></div>
+<div style="display:flex;gap:1.5rem"><a class="ft-l" href="https://www.linkedin.com/in/eddieriva" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="ft-l" href="mailto:eddieriva@gmail.com">Email</a></div>
+</div>
+<div class="ft-bt"><p class="ft-cp">© 2025 Edward Rivadeneira. All rights reserved.</p><p class="ft-lg">This website is for informational purposes only and does not constitute legal, financial, or investment advice. Securities-related services are provided through affiliated registered entities.</p></div>
+</div></footer>
+<iframe name="jf_frame" style="display:none"></iframe>
+
+<script>
+var JF="260336513183048";
+var ind=["Manufacturing","Business Services","Healthcare","Technology","Construction & Engineering","Transportation & Logistics","Food & Beverage","Industrials","Financial Services","Distribution","Energy & Utilities","Consumer Products"];
+var svcs=[{t:"Sell-Side M&A Advisory",d:"Our core offering. We represent business owners through every stage of the sale — from initial positioning through closing. We run a structured, competitive process to attract qualified buyers and maximize your outcome.",b:["Business positioning & narrative development","Confidential Information Memorandum (CIM) creation","Targeted buyer outreach & competitive auction","LOI negotiation & deal structuring","Due diligence management through close"]},{t:"Business Valuation",d:"Before going to market, you need to know what your business is worth — and what drives that value. Our valuation analysis gives you a clear picture and identifies the levers that increase your multiple.",b:["Adjusted EBITDA analysis & normalization","Market multiple benchmarking by industry","Quality of Earnings coordination","Value driver identification","Gap analysis & enhancement roadmap"]},{t:"Exit Planning & Readiness",d:"Not ready to sell today? We work with owners 1–3 years ahead of a sale to build value, reduce risk, and position the business to command a premium.",b:["Readiness assessment & timeline planning","Financial cleanup & accrual conversion","Customer concentration reduction strategies","Leadership delegation & owner independence","Legal, compliance & contract preparation"]},{t:"Deal Structure & Negotiation",d:"The headline price is only part of the story. We help negotiate the full deal — cash at close, earnouts, rollovers, seller notes, working capital, reps & warranties, and more.",b:["Stock vs. asset sale analysis","Earnout & rollover equity structuring","Tax-efficient deal design with your CPA","Working capital target negotiation","Reps, warranties & indemnification strategy"]}];
+var phs=[{n:"01",t:"Discovery & Readiness",tl:"Pre-Market (1–3 months)",d:"We assess your business, goals, and market conditions. This phase surfaces deal killers early and ensures premium positioning.",items:["Confidential consultation & goal alignment","Financial review & EBITDA normalization","Readiness assessment & gap analysis","Advisory team assembly (attorney, CPA, wealth advisor)","Preliminary valuation range & market timing"]},{n:"02",t:"Positioning & Go-to-Market",tl:"Weeks 1–4",d:"We craft your story for buyers — building the CIM, teaser, and curated buyer list, then launch confidential outreach.",items:["Anonymous teaser (blind profile) creation","Confidential Information Memorandum (CIM)","Curated buyer list: strategic, PE, family offices, search funds","NDA execution & controlled CIM distribution","Management presentation preparation"]},{n:"03",t:"Buyer Engagement & Offers",tl:"Weeks 4–12",d:"Qualified buyers review, engage in calls, and submit offers. We manage all communication to maintain competitive tension.",items:["Buyer Q&A management & information control","Management presentations & site visits","Indications of Interest (IOI) collection","Buyer qualification & financial verification","Letter of Intent (LOI) negotiation & selection"]},{n:"04",t:"Due Diligence & Negotiation",tl:"Weeks 12–24",d:"The buyer verifies everything. We manage the data room, coordinate responses, and keep the deal on track.",items:["Virtual data room setup & management","Financial, legal & operational diligence coordination","Working capital target negotiation","Purchase agreement review & redlining","Reps, warranties & indemnification negotiation"]},{n:"05",t:"Closing & Transition",tl:"Final 2–4 weeks",d:"We coordinate final deliverables, manage adjustments, and guide you through signing and transition.",items:["Final closing document review","Wire transfer & escrow coordination","Employee & customer communication planning","Post-close transition support","Earnout monitoring (if applicable)"]}];
+var chs=[{label:"Part 1 — Preparing to Sell",c:[["01","Are You Even Ready?"],["02","What Buyers Really Want"],["03","The Anatomy of a Sellable Business"],["04","Timing the Market (and Your Life)"],["05","Building Your Exit Dream Team"],["06","Deal Killers Lurking in Your Business"]]},{label:"Part 2 — Going to Market",c:[["07","Creating the Exit Strategy"],["08","The Teaser and CIM"],["09","Who's Buying?"],["10","Show Me the Money: Deal Structure Explained"],["11","What's It Worth? Demystifying Valuation"],["12","Know Your Buyer"],["13","Running the Race and Driving a Competitive Process"],["14","Keep Control While Navigating Diligence"],["15","Reps, Warranties, and the Fine Print"]]},{label:"Part 3 — Closing and Beyond",c:[["16","The Final Countdown"],["17","After the Close"],["18","The Second Bite of the Apple"],["19","Not Ready Yet? Build to Sell"],["20","Bonus: Selling to Employees or Family"]]}];
+
+function go(p){document.querySelectorAll('.page').forEach(function(x){x.classList.remove('active')});document.getElementById('page-'+p).classList.add('active');window.scrollTo({top:0,behavior:'instant'});document.querySelectorAll('.nav-link').forEach(function(l){l.classList.toggle('active',l.dataset.page===p)});document.getElementById('mobMenu').classList.remove('open');setTimeout(obs,50)}
+function toggleMob(){document.getElementById('mobMenu').classList.toggle('open')}
+window.addEventListener('scroll',function(){document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60)});
+
+function obs(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible');o.unobserve(x.target)}})},{threshold:.1});document.querySelectorAll('.reveal:not(.visible)').forEach(function(el){o.observe(el)})}
+
+function bl(items){return'<div>'+items.map(function(b){return'<div class="bl-item"><span class="bl-dot">✦</span><span class="bl-txt">'+b+'</span></div>'}).join('')+'</div>'}
+
+function buildInd(){document.getElementById('industries').innerHTML=ind.map(function(x,i){return'<div class="reveal" style="transition-delay:'+i*.025+'s"><div class="ind">'+x+'</div></div>'}).join('')}
+
+function buildSvc(){document.getElementById('svc-list').innerHTML=svcs.map(function(s,i){return'<section class="sec '+(i%2===0?'bg-white':'bg-off')+'"><div class="sec-inner reveal"><div class="g2"><div><div class="sv-n">0'+(i+1)+'</div><h3 class="sv-t">'+s.t+'</h3><p class="sv-d">'+s.d+'</p></div>'+bl(s.b)+'</div></div></section>'}).join('')}
+
+function buildProc(){document.getElementById('proc-list').innerHTML=phs.map(function(p,i){return'<section class="sec '+(i%2===0?'bg-white':'bg-off')+'"><div class="sec-inner reveal"><div class="g2"><div><div class="pr-n">'+p.n+'</div><h3 class="pr-t">'+p.t+'</h3><div class="pr-tl">'+p.tl+'</div><p class="pr-d">'+p.d+'</p></div>'+bl(p.items)+'</div></div></section>'}).join('')}
+
+function buildCh(){document.getElementById('ch-list').innerHTML=chs.map(function(part,pi){return'<div class="reveal" style="transition-delay:'+pi*.08+'s;margin-top:'+(pi===0?'2rem':'2.25rem')+'"><div class="ch-p">'+part.label+'</div>'+part.c.map(function(r){return'<div class="ch-r"><span class="ch-n">'+r[0]+'</span><span class="ch-nm">'+r[1]+'</span></div>'}).join('')+'</div>'}).join('')}
+
+function sub(e){e.preventDefault();var n=document.getElementById('f_name').value,em=document.getElementById('f_email').value,r=document.getElementById('f_role').value,rv=document.getElementById('f_rev').value,tl=document.getElementById('f_tl').value,er=document.getElementById('fErr');if(!n||!em||!r){er.textContent='Please fill in all required fields.';er.style.display='block';return}er.style.display='none';document.getElementById('subBtn').disabled=true;document.getElementById('subBtn').textContent='Sending...';try{var hf=document.createElement('form');hf.method='POST';hf.action='https://submit.jotform.com/submit/'+JF;hf.target='jf_frame';var fs={q3_fullName:n,q4_emailAddress:em,q5_yourRole:r,q6_estimatedAnnual:rv,q7_exitTimeline:tl};Object.keys(fs).forEach(function(k){var inp=document.createElement('input');inp.type='hidden';inp.name=k;inp.value=fs[k];hf.appendChild(inp)});document.body.appendChild(hf);hf.submit();setTimeout(function(){try{document.body.removeChild(hf)}catch(x){}},3e3);document.getElementById('formBox').innerHTML='<div style="text-align:center;padding:3rem 1rem"><div class="suc-i">✓</div><h3 style="font-family:var(--hd);font-size:1.3rem;color:var(--navy);margin-bottom:.5rem">Message Received</h3><p style="color:var(--txt2);font-size:.95rem">We\'ll be in touch within one business day.</p></div>'}catch(x){er.textContent='Something went wrong. Email eddieriva@gmail.com directly.';er.style.display='block';document.getElementById('subBtn').disabled=false;document.getElementById('subBtn').textContent='Schedule My Consultation →'}}
+
+document.addEventListener('DOMContentLoaded',function(){buildInd();buildSvc();buildProc();buildCh();obs()});
+</script>
+</body>
+</html>
